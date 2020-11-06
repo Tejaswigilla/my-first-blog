@@ -19,5 +19,11 @@
                 </div>
             </div>
         </div>
+        <form id='formulario' method='POST' action=''>
+            <h2>Publica tu tuit, {{ request.user.username.title }} </h2>
+            {% csrf_token %}
+            {{ formulario.as_p }}
+            <p><input type='submit' value='Confirmar' /></p>
+        </form>
     </body>
 </html>
